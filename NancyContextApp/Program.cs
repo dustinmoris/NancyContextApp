@@ -32,7 +32,7 @@ namespace NancyContextApp
 
     public class IndexModule : NancyModule
     {
-        public IndexModule(IDependency dependency)
+        public IndexModule(Dependency dependency)
         {
             Get["/"] = _ => "Hello World" + dependency.ContextWrapper.Context.Request.Query["test"];
         }
